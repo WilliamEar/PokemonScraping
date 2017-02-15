@@ -1,0 +1,18 @@
+.wrap {
+    width: 1000px;
+    margin: auto;
+    padding: 20px 20px 20px 20px;
+}
+
+/* Estil de les estadistiques */
+.stats table tr:nth-child(2n) {
+    background: light green;
+}
+
+.stats table, th, td  {
+    border: 1px solid black;
+}
+
+.stats tr:hover {
+    background: light gray;
+}
