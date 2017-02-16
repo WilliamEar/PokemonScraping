@@ -12,8 +12,8 @@ class HtmlGenerator:
         self.__html_head = '''
         <HTML>
             <HEAD>
-                <link rel="stylesheet" href="style.css">
-                <link rel="stylesheet" href="stats.css">
+                <link rel="stylesheet" href="css\style.css">
+                <link rel="stylesheet" href="css\stats.css">
                 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
                 <meta charset="UTF-8">
                 <TITLE>%s Stats</TITLE>
@@ -21,6 +21,14 @@ class HtmlGenerator:
 
             <BODY>
                 <div class="wrap">'''%(title)
+
+
+    def add_html_header(self, title, image_src):
+        self.__html_body += '''
+        <header class="main_title">
+            <div class="title"><h1>%s</h1></div>
+            <img src="%s">
+        </header>'''%(title, image_src)
 
 
     def add_html_code(self, name, new_html):
