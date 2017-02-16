@@ -1,0 +1,57 @@
+/********** stats style *********/
+/* TODO: probably change colors */
+.stats table {
+    border-collapse: collapse;
+    border: 5px solid black;
+    width: 80%;
+    /* Center table */
+    margin-left:auto;
+    margin-right: auto;
+}
+
+/* styling the borders and size of cells */
+.stats table td, .stats table th {
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    line-height: 20px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+
+/* Header borders */
+.stats table th {
+    /* Border of header are more important */
+    border: 4px solid black;
+}
+
+/* Header cells styling font */
+.stats table th, .stats th a, .stats th a:hover  {
+    /* Styling the headers font */
+    font-weight:lighter;
+    font-size: 18px;
+    color: white;
+    /* Background */
+    background-color: #4CAF50;
+    /* Disable links from headers */
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+
+
+/* pair children are gray */
+.stats table tr:nth-child(2n) {
+    background: rgba(142, 142, 142, 0.5);
+}
+
+ /* In the other hand the remainig children are white */
+.stats table tr:nth-child(2n - 1) {
+    background: rgb(255, 255, 255)
+}
+
+/* emphasize the cell which mouse is over */
+.stats td:hover {
+    background: rgb(255, 201, 201);
+}

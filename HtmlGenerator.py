@@ -13,6 +13,8 @@ class HtmlGenerator:
         <HTML>
             <HEAD>
                 <link rel="stylesheet" href="style.css">
+                <link rel="stylesheet" href="stats.css">
+                <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
                 <meta charset="UTF-8">
                 <TITLE>%s Stats</TITLE>
             </HEAD>
@@ -22,16 +24,16 @@ class HtmlGenerator:
 
 
     def add_html_code(self, name, new_html):
+        # Adding a new div class to html code
         self.__html_body += "<div class=\"%s\">%s</div>"%(name, new_html)
 
 
     def create_html_file(self, name):
         path = "CreatedWp/" + name + ".html"
         try:
+            final_code = self.__html_head + self.__html_body + self.__html_closer
             f = open(path, "w")
-            f.write(self.__html_head)
-            f.write(self.__html_body)
-            f.write(self.__html_closer)
+            f.write(final_code)
             f.close()
         except IOError:
             print "Error creating/writing the html file."
